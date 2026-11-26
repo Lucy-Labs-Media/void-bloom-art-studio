@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    /* Reading comfort: apply the saved choice before first paint. Lexend loads only when it is on. */
+    window.vbLexend = function () {
+      if (document.getElementById('lexend-css')) return;
+      var l = document.createElement('link');
+      l.id = 'lexend-css'; l.rel = 'stylesheet';
+      l.href = 'https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap';
+      document.head.appendChild(l);
+    };
+    try {
+      if (localStorage.getItem('reading_comfort') === 'on') {
+        document.documentElement.classList.add('reading');
+        window.vbLexend();
+      }
+    } catch (e) { /* storage blocked: default view */ }
+  </script>
+
+  <!-- Google Consent Mode v2 (denied until the visitor opts in) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    var vbConsent = 'denied';
+    try { if (localStorage.getItem('consent_status') === 'granted') vbConsent = 'granted'; } catch (e) { /* storage blocked */ }
+    gtag('consent', 'default', {
+      'ad_storage': vbConsent,
+      'ad_user_data': vbConsent,
+      'ad_personalization': vbConsent,
+      'analytics_storage': vbConsent
+    });
+  </script>
+
+  <!-- Google tag (gtag.js). MUST-PROVIDE: the owner confirms this GA4 ID belongs to the new site (W0). -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1MWXMB71H"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-Y1MWXMB71H');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Void Bloom Art Studio | Las Vegas Fine Art &amp; Original Contemporary Works</title>
+  <meta name="description" content="Original contemporary fine art, textured canvas pieces, sculptural fiber works, and licensing by Las Vegas artist Lindsey McConnell." />
+  <link rel="canonical" href="https://lucy-labs-media.github.io/void-bloom-art-studio/" />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Open Graph / Social Media Previews -->
+  <meta property="og:title" content="Void Bloom Art Studio | Las Vegas Fine Artist" />
+  <meta property="og:description" content="Original vibrant fine art, textured canvas pieces, and creative collaborations." />
+  <meta property="og:image" content="https://lucy-labs-media.github.io/void-bloom-art-studio/assets/hero-featured.jpg" />
+  <meta property="og:url" content="https://lucy-labs-media.github.io/void-bloom-art-studio/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Void Bloom Art Studio | Las Vegas Fine Artist" />
+  <meta name="twitter:description" content="Original vibrant fine art, textured canvas pieces, and creative collaborations." />
+  <meta name="twitter:image" content="https://lucy-labs-media.github.io/void-bloom-art-studio/assets/hero-featured.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="navbar">
+    <a href="#" class="brand" aria-label="Void Bloom Art Studio - Return to home">VOID BLOOM ART STUDIO</a>
+    <nav class="nav-links" aria-label="Main Navigation">
+      <ul>
+        <li><a href="#gallery">Collection</a></li>
+        <li><a href="#partnerships">Partnerships</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="btn-nav">Inquire / Connect</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="reading-toggle" class="btn-reading" aria-pressed="false">Reading comfort</button>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <p class="eyebrow">Las Vegas, NV • Contemporary Fine Art</p>
+        <h1 id="hero-heading">Original Art Rooted in Story, Color, and Atmosphere.</h1>
+        <p>Bringing spaces alive through bespoke canvas paintings, sculptural fiber art, limited collections, and creative brand partnerships.</p>
+        <div class="hero-actions">
+          <a href="#gallery" class="btn primary">View Latest Works</a>
+          <a href="#partnerships" class="btn secondary">Partnerships &amp; Licensing</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <picture>
+          <source type="image/webp" srcset="assets/hero-featured-800.webp 800w, assets/hero-featured-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 45vw" />
+          <img src="assets/hero-featured.jpg" width="1600" height="2133"
+               alt="Portrait of Las Vegas artist Lindsey McConnell with violet hair wearing an evil eye necklace"
+               loading="eager" fetchpriority="high" decoding="async" />
+        </picture>
+      </div>
+    </section>
+
+    <!-- Proof / Value Bar -->
+    <section class="proof-bar" aria-label="Key Services and Studio Offerings">
+      <ul class="proof-list">
+        <li>Original Canvas &amp; Sculptural Works</li>
+        <li>Commercial Licensing &amp; Brand Partnerships</li>
+        <li>Local Las Vegas Studio Pick-Up &amp; Nationwide Secure Shipping</li>
+      </ul>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section gallery-section" aria-labelledby="gallery-heading">
+      <div class="section-header">
+        <h2 id="gallery-heading">Selected Originals &amp; Archive</h2>
+        <p>Browse current fine art. Select any available piece to reserve, or view archived works for waitlist and custom inquiries.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="art-card" aria-labelledby="art-title-1">
+          <div class="image-wrapper">
+            <picture>
+              <source type="image/webp" srcset="assets/gallery/art-01-800.webp 800w, assets/gallery/art-01-1600.webp 1600w" sizes="(max-width: 700px) 100vw, 400px" />
+              <img src="assets/gallery/art-01.jpg" width="1600" height="1200"
+                   alt="Vibrant abstract expressionist painting of blooming yellow and coral wildflowers against cobalt blue stalks in a slim black frame"
+                   loading="lazy" decoding="async" />
+            </picture>
+            <span class="badge available"><span class="sr-only">Status: </span>Available</span>
+          </div>
+          <div class="card-meta">
+            <h3 id="art-title-1">Wild Blossom Nocturne</h3>
+            <p class="specs">30" x 40" • Impasto Acrylic &amp; Oil on Framed Canvas</p>
+            <div class="card-footer">
+              <span class="price"><span class="sr-only">Price: </span>$1,600</span>
+              <a href="#contact" class="link-cta" onclick="prefillInquiry('Wild Blossom Nocturne', 'Available Original Piece')" aria-label="Inquire to purchase Wild Blossom Nocturne">Inquire to Purchase <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="art-card" aria-labelledby="art-title-2">
+          <div class="image-wrapper">
+            <picture>
+              <source type="image/webp" srcset="assets/gallery/art-02-800.webp 800w, assets/gallery/art-02-1600.webp 1600w" sizes="(max-width: 700px) 100vw, 400px" />
+              <img src="assets/gallery/art-02.jpg" width="1600" height="2133"
+                   alt="Handcrafted felted wool floral arrangement in a glass vase featuring textured purple, ochre, and blue petals on a framing counter"
+                   loading="lazy" decoding="async" />
+            </picture>
+            <span class="badge sold"><span class="sr-only">Status: </span>Archive / Private Collection</span>
+          </div>
+          <div class="card-meta">
+            <h3 id="art-title-2">Everlasting Flora Arrangement</h3>
+            <p class="specs">18" Height • Sculptural Wet-Felted Wool in Glass Vessel</p>
+            <div class="card-footer">
+              <span class="price">Archived</span>
+              <a href="#contact" class="link-cta" onclick="prefillInquiry('Everlasting Flora Arrangement', 'Commission Waitlist')" aria-label="Join commission waitlist for work similar to Everlasting Flora Arrangement">Join Waitlist / Inquire <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="art-card" aria-labelledby="art-title-3">
+          <div class="image-wrapper">
+            <picture>
+              <source type="image/webp" srcset="assets/gallery/art-03-800.webp 800w, assets/gallery/art-03-1600.webp 1600w" sizes="(max-width: 700px) 100vw, 400px" />
+              <img src="assets/gallery/art-03.jpg" width="1600" height="1400"
+                   alt="Close-up of a handmade felted wool rose sculpture with soft blended layers of periwinkle, olive, and lavender"
+                   loading="lazy" decoding="async" />
+            </picture>
+            <span class="badge sold"><span class="sr-only">Status: </span>Archive / Private Collection</span>
+          </div>
+          <div class="card-meta">
+            <h3 id="art-title-3">Prismatic Felted Bloom</h3>
+            <p class="specs">6" Diameter • Botanical Wool Fiber Art Sculpture</p>
+            <div class="card-footer">
+              <span class="price">Archived</span>
+              <a href="#contact" class="link-cta" onclick="prefillInquiry('Prismatic Felted Bloom', 'Commission Waitlist')" aria-label="Join commission waitlist for work similar to Prismatic Felted Bloom">Join Waitlist / Inquire <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="art-card" aria-labelledby="art-title-4">
+          <div class="image-wrapper">
+            <picture>
+              <source type="image/webp" srcset="assets/gallery/art-04-800.webp 800w, assets/gallery/art-04-1600.webp 1600w" sizes="(max-width: 700px) 100vw, 400px" />
+              <img src="assets/gallery/art-04.jpg" width="1600" height="1739"
+                   alt="Textured ceramic wall sculpture of a snarling wildcat with mottled cobalt glaze, open jaws showing fangs, and cat-slit green eyes"
+                   loading="lazy" decoding="async" />
+            </picture>
+            <span class="badge sold"><span class="sr-only">Status: </span>Archive / Private Collection</span>
+          </div>
+          <div class="card-meta">
+            <h3 id="art-title-4">Cerulean Beast Relief</h3>
+            <p class="specs">14" x 11" x 6" • Glazed Stoneware Ceramic Wall Sculpture</p>
+            <div class="card-footer">
+              <span class="price">Archived</span>
+              <a href="#contact" class="link-cta" onclick="prefillInquiry('Cerulean Beast Relief', 'Commission Waitlist')" aria-label="Join commission waitlist for work similar to Cerulean Beast Relief">Join Waitlist / Inquire <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Partnerships -->
+    <section id="partnerships" class="section commissions-section" aria-labelledby="partnerships-heading">
+      <div class="section-header">
+        <h2 id="partnerships-heading">Collaborations &amp; Opportunities</h2>
+        <p>Private commissions are currently paused for the season, but our studio is actively welcoming select business partnerships, commercial licensing, and creative collaborations.</p>
+      </div>
+
+      <div class="process-steps">
+        <div class="step-card">
+          <span class="status-pill">Coming Soon</span>
+          <h3>Bespoke Commissions</h3>
+          <p>Custom private client commissions are temporarily paused. Join the collector waitlist below to receive priority access when new commission slots reopen.</p>
+        </div>
+        <div class="step-card">
+          <span class="status-pill active">Open</span>
+          <h3>Art Licensing &amp; Wholesale</h3>
+          <p>Available for brand licensing, surface pattern design, product collaborations, print publishing, and curated wholesale retail collections.</p>
+        </div>
+        <div class="step-card">
+          <span class="status-pill active">Open</span>
+          <h3>Interior Design &amp; Galleries</h3>
+          <p>Partnering with interior designers, corporate staging projects, hospitality spaces, and fine art galleries for site installations and exhibitions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ART STUDIO IQ: COMING SOON
+      Every visitor-facing sentence here is Lindsey's and comes from site-copy/art-studio-iq.md (Home section).
+      The .todo boxes are placeholders. Replace each one with her exact text and delete the box styling.
+      The form labels and button are plain functional text; she may replace them in the same file.
+      One --cta button only (the submit button). Do not add a price, rating, count or release date.
+    -->
+    <section id="art-studio-iq" class="section aiq-section" aria-labelledby="aiq-heading">
+      <div class="aiq-grid">
+        <div class="aiq-copy">
+          <span class="status-pill active">Coming Soon</span>
+          <h2 id="aiq-heading"><span class="todo">TODO: Lindsey's headline (site-copy/art-studio-iq.md, Home section, "Headline")</span></h2>
+          <p class="aiq-lede todo">TODO: Lindsey's one-sentence promise: who it is for and the one thing it does for them ("Promise")</p>
+          <ul class="aiq-points" aria-label="What Art Studio IQ does">
+            <li><span class="todo">TODO: Lindsey's benefit 1 ("Benefit 1")</span></li>
+            <li><span class="todo">TODO: Lindsey's benefit 2 ("Benefit 2")</span></li>
+            <li><span class="todo">TODO: Lindsey's benefit 3 ("Benefit 3")</span></li>
+          </ul>
+          <p class="aiq-note todo">TODO: Lindsey's no-AI line, matching her About statement ("No AI line")</p>
+          <p class="aiq-more"><a href="art-studio-iq/" class="btn secondary">See what is planned<span class="sr-only"> for Art Studio IQ</span></a></p>
+        </div>
+
+        <div class="aiq-card" data-signup>
+          <h3 id="aiq-form-heading"><span class="todo">TODO: Lindsey's form heading ("Form heading")</span></h3>
+          <p class="form-intro todo">TODO: Lindsey's line above the form: what the person gets by joining ("Form line")</p>
+
+          <form class="signup-form" action="https://api.web3forms.com/submit" method="POST"
+                data-form data-ajax data-signup-form novalidate aria-labelledby="aiq-form-heading">
+            <!-- MUST-PROVIDE: paste the real Web3Forms access key over YOUR_ACCESS_KEY_HERE (W0). Never invent one. -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+            <input type="hidden" name="subject" value="Art Studio IQ beta signup" />
+            <input type="hidden" name="from_name" value="Void Bloom Art Studio website" />
+            <input type="hidden" name="redirect" value="https://lucy-labs-media.github.io/void-bloom-art-studio/?joined=1#art-studio-iq" />
+            <input type="hidden" name="source" value="home-section" />
+            <input type="hidden" name="utm_source" value="" />
+            <input type="hidden" name="utm_medium" value="" />
+            <input type="hidden" name="utm_campaign" value="" />
+            <input type="hidden" name="ref" value="" />
+            <input type="hidden" name="referrer" value="" />
+            <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" aria-hidden="true" />
+
+            <div class="form-group">
+              <label for="aiq-email">Email address <span class="required-mark" aria-hidden="true">*</span></label>
+              <input type="email" id="aiq-email" name="email" required autocomplete="email" inputmode="email" aria-required="true" />
+            </div>
+
+            <div class="form-group">
+              <label for="aiq-platform">Which phone do you use? <span class="required-mark" aria-hidden="true">*</span></label>
+              <select id="aiq-platform" name="platform" required aria-required="true">
+                <option value="">Choose one</option>
+                <option value="android">Android</option>
+                <option value="iphone">iPhone</option>
+                <option value="both">Both</option>
+              </select>
+            </div>
+
+            <div class="check-row">
+              <input type="checkbox" id="aiq-consent" name="consent" value="yes" required aria-required="true" />
+              <label for="aiq-consent">I agree to be emailed about Art Studio IQ.</label>
+            </div>
+
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <button type="submit" class="btn primary full-width">Join the list</button>
+            <p class="fine-print todo">TODO: Lindsey's reassurance line under the button ("Reassurance")</p>
+          </form>
+
+          <div class="success-box" data-success hidden>
+            <h3 tabindex="-1" data-focus><span class="todo">TODO: Lindsey's thank-you heading ("Thank you heading")</span></h3>
+            <p data-platform="android" class="todo" hidden>TODO: Lindsey's thank-you line for Android users ("Thank you, Android")</p>
+            <p data-platform="iphone" class="todo" hidden>TODO: Lindsey's thank-you line for iPhone users ("Thank you, iPhone")</p>
+            <p data-platform="both" class="todo" hidden>TODO: Lindsey's thank-you line for people with both ("Thank you, both")</p>
+            <p data-platform="" class="todo" hidden>TODO: Lindsey's general thank-you line ("Thank you, general")</p>
+
+            <form class="step2 signup-form" action="https://api.web3forms.com/submit" method="POST" data-form data-ajax data-step2 novalidate>
+              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+              <input type="hidden" name="subject" value="Art Studio IQ beta signup: what they make" />
+              <input type="hidden" name="from_name" value="Void Bloom Art Studio website" />
+              <input type="hidden" name="source" value="home-section-step2" />
+              <input type="hidden" name="email" value="" />
+              <input type="hidden" name="platform_choice" value="" />
+              <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" aria-hidden="true" />
+              <div class="form-group">
+                <label for="aiq-medium">What do you make? (optional)</label>
+                <select id="aiq-medium" name="medium">
+                  <option value="">Choose one</option>
+                  <option>Painting</option>
+                  <option>Ceramics</option>
+                  <option>Fiber</option>
+                  <option>Sculpture</option>
+                  <option>Digital</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <p class="form-status" role="status" aria-live="polite"></p>
+              <button type="submit" class="btn secondary">Save</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about-section" aria-labelledby="about-heading">
+      <div class="about-grid">
+        <picture>
+          <source type="image/webp" srcset="assets/artist-profile.webp" />
+          <img src="assets/artist-profile.jpg" width="433" height="577"
+               alt="Artist Lindsey McConnell smiling in front of a dense backdrop of vibrant magenta blossoms"
+               class="about-img" loading="lazy" decoding="async" />
+        </picture>
+        <div class="about-text">
+          <h2 id="about-heading">Behind the Studio</h2>
+          <p>I create tactile, story-driven artwork across distinct mediums—ranging from expressive impasto canvas paintings to hand-sculpted wet-felted wool and high-fire ceramic sculptures.</p>
+          <p>Working out of Las Vegas, every piece explores tension, organic textures, and bold color palettes made to energize living and commercial spaces.</p>
+          <ul class="social-tags" aria-label="Social media and direct contact channels">
+            <!-- MUST-CHECK: keep this TikTok link only if @fullsignal_ belongs to Void Bloom (W0). -->
+            <li><a href="https://www.tiktok.com/@fullsignal_" target="_blank" rel="noopener noreferrer">TikTok <span class="sr-only">(opens in new tab)</span></a></li>
+            <li><a href="https://www.instagram.com/lasvegasartlady/" target="_blank" rel="noopener noreferrer">Instagram <span class="sr-only">(opens in new tab)</span></a></li>
+            <li><a href="mailto:lindseybmcconnell@gmail.com">Email Direct</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+      <div class="contact-card">
+        <div class="contact-header">
+          <h2 id="contact-heading">Connect With the Studio</h2>
+          <p>Have questions about an available piece, joining the commission waitlist, or discussing a commercial partnership? Send a note below and I will respond within 24–48 hours.</p>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" data-form novalidate>
+          <!-- MUST-PROVIDE: paste the real Web3Forms access key over YOUR_ACCESS_KEY_HERE (W0). -->
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+          <input type="hidden" name="subject" value="New Fine Art Inquiry from Website" />
+          <input type="hidden" name="redirect" value="https://lucy-labs-media.github.io/void-bloom-art-studio/#contact" />
+          <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" aria-hidden="true" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name <span class="required-mark" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="e.g. Elena Vance" aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span class="required-mark" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="e.g. elena@example.com" aria-required="true" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inquiryType">Inquiry Purpose</label>
+            <select id="inquiryType" name="inquiryType">
+              <option value="Available Original Piece">Purchase Available Original</option>
+              <option value="Art Licensing / Commercial Collaboration">Art Licensing &amp; Brand Collaboration</option>
+              <option value="Interior Design / Trade Partnership">Interior Design / Trade Partnership</option>
+              <option value="Gallery Exhibition / Press">Gallery Exhibition / Press Inquiry</option>
+              <option value="Commission Waitlist">Join Custom Commission Waitlist (Coming Soon)</option>
+              <option value="Other">General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message / Details <span class="required-mark" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="4" required aria-required="true" placeholder="Tell me about your space, which piece caught your eye, or the scope of your collaboration idea..."></textarea>
+          </div>
+
+          <button type="submit" class="btn primary full-width">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <ul aria-label="More from the studio">
+      <li><a href="art-studio-iq/">Art Studio IQ</a></li>
+    </ul>
+    <p>© 2026 Void Bloom Art Studio and Lindsey McConnell • All rights reserved. Las Vegas, NV.</p>
+  </footer>
+
+  <aside id="cookie-banner" class="cookie-banner hidden" role="region" aria-label="Cookie and Privacy Consent">
+    <div class="cookie-content">
+      <p>We use cookies to analyze website traffic and improve your browsing experience. Choose whether to allow analytics cookies.</p>
+      <div class="cookie-actions">
+        <button id="btn-decline-cookies" type="button" class="btn cookie-btn secondary">Decline</button>
+        <button id="btn-accept-cookies" type="button" class="btn cookie-btn primary">Accept</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>

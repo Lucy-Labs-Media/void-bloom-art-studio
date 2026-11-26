@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    window.vbLexend = function () {
+      if (document.getElementById('lexend-css')) return;
+      var l = document.createElement('link');
+      l.id = 'lexend-css'; l.rel = 'stylesheet';
+      l.href = 'https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap';
+      document.head.appendChild(l);
+    };
+    try {
+      if (localStorage.getItem('reading_comfort') === 'on') {
+        document.documentElement.classList.add('reading');
+        window.vbLexend();
+      }
+    } catch (e) { /* storage blocked: default view */ }
+  </script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    var vbConsent = 'denied';
+    try { if (localStorage.getItem('consent_status') === 'granted') vbConsent = 'granted'; } catch (e) { /* storage blocked */ }
+    gtag('consent', 'default', {
+      'ad_storage': vbConsent,
+      'ad_user_data': vbConsent,
+      'ad_personalization': vbConsent,
+      'analytics_storage': vbConsent
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1MWXMB71H"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-Y1MWXMB71H');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TODO: title and description come from Lindsey's file (site-copy/art-studio-iq.md, "Page title" and "Page description"). -->
+  <title>TODO: Art Studio IQ page title | Void Bloom Art Studio</title>
+  <meta name="description" content="TODO: Lindsey's page description" />
+  <link rel="canonical" href="https://lucy-labs-media.github.io/void-bloom-art-studio/art-studio-iq/" />
+  <meta name="color-scheme" content="light dark" />
+  <meta property="og:title" content="TODO: Art Studio IQ page title" />
+  <meta property="og:description" content="TODO: Lindsey's page description" />
+  <meta property="og:image" content="https://lucy-labs-media.github.io/void-bloom-art-studio/assets/hero-featured.jpg" />
+  <meta property="og:url" content="https://lucy-labs-media.github.io/void-bloom-art-studio/art-studio-iq/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://lucy-labs-media.github.io/void-bloom-art-studio/assets/hero-featured.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="navbar">
+    <a href="../index.html" class="brand" aria-label="Void Bloom Art Studio - Return to home">VOID BLOOM ART STUDIO</a>
+    <nav class="nav-links" aria-label="Main Navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#beta" class="btn-nav">Join the list</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="reading-toggle" class="btn-reading" aria-pressed="false">Reading comfort</button>
+  </header>
+
+  <main id="main-content">
+
+    <!--
+      Every visitor-facing sentence on this page is Lindsey's, from site-copy/art-studio-iq.md.
+      Replace each .todo box with her exact text. Do not write, reword or shorten it.
+      No prices, ratings, download counts or release dates anywhere on this page.
+      HIDDEN UNTIL THE APP IS IN TESTING: the "built by a working artist" line from her file. Do not render it yet.
+      Form moved up beside the intro (conversion); the content order below follows W2.
+    -->
+
+    <section class="aiq-hero" aria-labelledby="aiq-page-heading">
+      <div class="aiq-grid">
+        <div class="aiq-copy">
+          <span class="status-pill active">Coming Soon</span>
+          <h1 id="aiq-page-heading"><span class="todo">TODO: Lindsey's heading ("Heading")</span></h1>
+          <p class="aiq-lede todo">TODO: Lindsey's short intro ("Intro")</p>
+          <p class="aiq-note todo">TODO: Lindsey's Android and iPhone waitlist line ("Android and iPhone")</p>
+        </div>
+
+        <div id="beta" class="aiq-card" data-signup>
+          <h2 id="beta-heading" class="form-heading"><span class="todo">TODO: Lindsey's form heading ("Form heading")</span></h2>
+          <p class="form-intro todo">TODO: Lindsey's line above the form ("Form line")</p>
+
+          <form class="signup-form" action="https://api.web3forms.com/submit" method="POST"
+                data-form data-ajax novalidate aria-labelledby="beta-heading">
+            <!-- MUST-PROVIDE: paste the real Web3Forms access key over YOUR_ACCESS_KEY_HERE (W0). Never invent one. -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+            <input type="hidden" name="subject" value="Art Studio IQ beta signup" />
+            <input type="hidden" name="from_name" value="Void Bloom Art Studio website" />
+            <input type="hidden" name="redirect" value="https://lucy-labs-media.github.io/void-bloom-art-studio/art-studio-iq/?joined=1#beta" />
+            <input type="hidden" name="source" value="art-studio-iq-page" />
+            <input type="hidden" name="utm_source" value="" />
+            <input type="hidden" name="utm_medium" value="" />
+            <input type="hidden" name="utm_campaign" value="" />
+            <input type="hidden" name="ref" value="" />
+            <input type="hidden" name="referrer" value="" />
+            <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" aria-hidden="true" />
+
+            <div class="form-group">
+              <label for="beta-email">Email address <span class="required-mark" aria-hidden="true">*</span></label>
+              <input type="email" id="beta-email" name="email" required autocomplete="email" inputmode="email" aria-required="true" />
+            </div>
+
+            <div class="form-group">
+              <label for="beta-platform">Which phone do you use? <span class="required-mark" aria-hidden="true">*</span></label>
+              <select id="beta-platform" name="platform" required aria-required="true">
+                <option value="">Choose one</option>
+                <option value="android">Android</option>
+                <option value="iphone">iPhone</option>
+                <option value="both">Both</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="beta-medium">What do you make? (optional)</label>
+              <select id="beta-medium" name="medium">
+                <option value="">Choose one</option>
+                <option>Painting</option>
+                <option>Ceramics</option>
+                <option>Fiber</option>
+                <option>Sculpture</option>
+                <option>Digital</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="check-row">
+              <input type="checkbox" id="beta-consent" name="consent" value="yes" required aria-required="true" />
+              <label for="beta-consent">I agree to be emailed about Art Studio IQ.</label>
+            </div>
+
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <button type="submit" class="btn primary full-width">Join the list</button>
+            <p class="fine-print todo">TODO: Lindsey's reassurance line under the button ("Reassurance")</p>
+          </form>
+
+          <div class="success-box" data-success hidden>
+            <h3 tabindex="-1" data-focus><span class="todo">TODO: Lindsey's thank-you heading ("Thank you heading")</span></h3>
+            <p data-platform="android" class="todo" hidden>TODO: Lindsey's thank-you line for Android users ("Thank you, Android")</p>
+            <p data-platform="iphone" class="todo" hidden>TODO: Lindsey's thank-you line for iPhone users ("Thank you, iPhone")</p>
+            <p data-platform="both" class="todo" hidden>TODO: Lindsey's thank-you line for people with both ("Thank you, both")</p>
+            <p data-platform="" class="todo" hidden>TODO: Lindsey's general thank-you line ("Thank you, general")</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="features-heading">
+      <div class="section-header">
+        <h2 id="features-heading"><span class="todo">TODO: Lindsey's features heading ("Features heading")</span></h2>
+      </div>
+      <ul class="aiq-feature-grid">
+        <li class="aiq-feature">
+          <h3><span class="todo">TODO: Lindsey's feature title ("Feature: pricing and profit math")</span></h3>
+          <p class="todo">TODO: Lindsey's one or two sentences ("Feature: pricing and profit math")</p>
+        </li>
+        <li class="aiq-feature">
+          <h3><span class="todo">TODO: Lindsey's feature title ("Feature: what you keep after fees")</span></h3>
+          <p class="todo">TODO: Lindsey's one or two sentences ("Feature: what you keep after fees")</p>
+        </li>
+        <li class="aiq-feature">
+          <h3><span class="todo">TODO: Lindsey's feature title ("Feature: Studio Eye")</span></h3>
+          <p class="todo">TODO: Lindsey's one or two sentences ("Feature: Studio Eye")</p>
+        </li>
+        <li class="aiq-feature">
+          <h3><span class="todo">TODO: Lindsey's feature title ("Feature: listing photo prep")</span></h3>
+          <p class="todo">TODO: Lindsey's one or two sentences ("Feature: listing photo prep")</p>
+        </li>
+        <li class="aiq-feature">
+          <h3><span class="todo">TODO: Lindsey's feature title ("Feature: the writing desk")</span></h3>
+          <p class="todo">TODO: Lindsey's one or two sentences ("Feature: the writing desk")</p>
+        </li>
+        <li class="aiq-feature">
+          <h3><span class="todo">TODO: Lindsey's feature title ("Feature: inventory and provenance")</span></h3>
+          <p class="todo">TODO: Lindsey's one or two sentences ("Feature: inventory and provenance")</p>
+        </li>
+        <li class="aiq-feature">
+          <h3><span class="todo">TODO: Lindsey's feature title ("Feature: supplies with reorder alerts")</span></h3>
+          <p class="todo">TODO: Lindsey's one or two sentences ("Feature: supplies with reorder alerts")</p>
+        </li>
+        <li class="aiq-feature">
+          <h3><span class="todo">TODO: Lindsey's feature title ("Feature: licensing and usage rights")</span></h3>
+          <p class="todo">TODO: Lindsey's one or two sentences ("Feature: licensing and usage rights")</p>
+        </li>
+        <li class="aiq-feature">
+          <h3><span class="todo">TODO: Lindsey's feature title ("Feature: simple offline lists")</span></h3>
+          <p class="todo">TODO: Lindsey's one or two sentences ("Feature: simple offline lists")</p>
+        </li>
+        <li class="aiq-feature">
+          <h3><span class="todo">TODO: Lindsey's feature title ("Feature: sales insights")</span></h3>
+          <p class="todo">TODO: Lindsey's one or two sentences ("Feature: sales insights")</p>
+        </li>
+        <li class="aiq-feature">
+          <h3><span class="todo">TODO: Lindsey's feature title ("Feature: commissions")</span></h3>
+          <p class="todo">TODO: Lindsey's one or two sentences ("Feature: commissions")</p>
+        </li>
+        <li class="aiq-feature">
+          <h3><span class="todo">TODO: Lindsey's feature title ("Feature: business dashboards")</span></h3>
+          <p class="todo">TODO: Lindsey's one or two sentences ("Feature: business dashboards")</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section band" aria-labelledby="noai-heading">
+      <div class="prose">
+        <h2 id="noai-heading"><span class="todo">TODO: Lindsey's no-AI heading ("No AI inside")</span></h2>
+        <p class="todo">TODO: Lindsey's no-AI statement, matching her About statement ("No AI inside")</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="easy-heading">
+      <div class="prose">
+        <h2 id="easy-heading"><span class="todo">TODO: Lindsey's heading for ease of use ("Made to be easy to use")</span></h2>
+        <p class="todo">TODO: Lindsey's text on comfort and accessibility. Flag any "certified" or "compliant" claim before publishing ("Made to be easy to use")</p>
+      </div>
+    </section>
+
+    <section class="section band" aria-labelledby="tiers-heading">
+      <div class="section-header">
+        <h2 id="tiers-heading"><span class="todo">TODO: Lindsey's tiers heading ("Tiers heading")</span></h2>
+      </div>
+      <ul class="tiers">
+        <li class="tier">
+          <h3><span class="todo">TODO: Lindsey's name for the first tier ("Free")</span></h3>
+          <p class="todo">TODO: what the first tier includes, no price ("Free")</p>
+        </li>
+        <li class="tier">
+          <h3><span class="todo">TODO: Lindsey's name for the second tier ("Essentials")</span></h3>
+          <p class="todo">TODO: what the second tier includes, no price ("Essentials")</p>
+        </li>
+        <li class="tier">
+          <h3><span class="todo">TODO: Lindsey's name for the third tier ("Pro")</span></h3>
+          <p class="todo">TODO: what the third tier includes, no price ("Pro")</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section center" aria-labelledby="final-heading">
+      <div class="prose">
+        <h2 id="final-heading"><span class="todo">TODO: Lindsey's closing line ("Closing")</span></h2>
+        <p><a href="#beta" class="btn secondary">Join the list</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <ul aria-label="More from the studio">
+      <li><a href="../index.html">Void Bloom Art Studio</a></li>
+    </ul>
+    <p>© 2026 Void Bloom Art Studio and Lindsey McConnell • All rights reserved. Las Vegas, NV.</p>
+  </footer>
+
+  <aside id="cookie-banner" class="cookie-banner hidden" role="region" aria-label="Cookie and Privacy Consent">
+    <div class="cookie-content">
+      <p>We use cookies to analyze website traffic and improve your browsing experience. Choose whether to allow analytics cookies.</p>
+      <div class="cookie-actions">
+        <button id="btn-decline-cookies" type="button" class="btn cookie-btn secondary">Decline</button>
+        <button id="btn-accept-cookies" type="button" class="btn cookie-btn primary">Accept</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="../script.js"></script>
+</body>
+</html>
