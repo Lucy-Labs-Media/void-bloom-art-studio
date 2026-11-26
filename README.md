@@ -12,7 +12,7 @@ art-studio-iq/index.html Page for artists with the full waitlist form (#beta)
 style.css               All styles. Every color is a variable in :root (Studio Palette, light and dark)
 script.js               Cookie consent, Reading comfort, form checks and sending, inquiry prefill
 assets/                 Six images, each as 800 and 1600 px WebP plus a 1600 px JPEG fallback
-site-copy/              Lindsey's words for the Art Studio IQ sections (she writes these)
+site-copy/              The Art Studio IQ wording, as draft for Lindsey to approve or rewrite
 tools/check-todos.sh    Lists placeholders still on the site
 .nojekyll               Tells GitHub Pages to serve the files as they are
 ```
@@ -21,7 +21,7 @@ Every internal link and asset path is relative, because the site is served from 
 
 ## Before you share the link
 
-1. Run `bash tools/check-todos.sh`. It must print "No placeholders left."
+1. Lindsey reads site-copy/art-studio-iq.md. The wording on the site is a draft written by Claude (Nov 26, 2026). She keeps it or rewrites it in her own words, and Jordan updates the pages to match. Then delete the `DRAFT WORDING` comments. Run `bash tools/check-todos.sh` to see what is left.
 2. Paste the real Web3Forms access key over every `value="YOUR_ACCESS_KEY_HERE"` (4 hidden fields: contact, coming-soon signup and its second step on the home page, and the beta form on the Art Studio IQ page). Send a test from each form.
 3. Confirm the GA4 ID `G-Y1MWXMB71H` belongs to this site, or replace it.
 4. Confirm the TikTok link `@fullsignal_` belongs to Void Bloom, or remove it.
